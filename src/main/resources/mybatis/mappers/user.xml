@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+	
+	<!-- 김준호 -->
+	<!-- 로그인 -->
+	<select id="login" parameterType="com.lunchwb.vo.UserVo" resultType="com.lunchwb.vo.UserVo">
+		<![CDATA[
+			select user_no userNo
+			        ,user_email userEmail
+			        ,user_name userName
+			        ,user_grade userGrade
+			from users
+			where user_email = #{userEmail}
+			and user_password = #{userPassword} 		
+		]]>
+	</select>
+	
+	<!-- 회원가입 -->
+	<insert id="join" parameterType="com.lunchwb.vo.UserVo">
+		<![CDATA[
+			insert into users
+			values (seq_user_no.nextval, #{userEmail}, #{userPassword}, #{userName}, #{userBirthYear}, #{userSex}, sysdate, 1)
+		]]>
+	</insert>
+	
+	<!-- 이메일 확인 -->
+	<select id="checkEmail" parameterType="com.lunchwb.vo.UserVo" resultType="com.lunchwb.vo.UserVo">
+		<![CDATA[
+			select user_email userEmail
+			from users
+			where user_email = #{userEmail}
+		]]>
+	</select>
+	
+	<!-- 회원 정보 수정 -->
+	<!-- 회원 정보 불러오기 -->
+	<select id="getUser" parameterType="com.lunchwb.vo.UserVo" resultType="com.lunchwb.vo.UserVo">
+		<![CDATA[
+			select user_email userEmail
+			        ,user_name userName
+			        ,to_char(user_Birth_Year, 'yyyy-mm-dd') userBirthYear
+			        ,user_sex userSex
+			from users
+			where user_email = #{userEmail}
+			and user_password = #{userPassword} 		
+		]]>
+	</select>
+	
+	<!-- 회원 정보 수정 업데이트 -->
+	<update id="modifyUser" parameterType="com.lunchwb.vo.UserVo">
+		<![CDATA[
+			update users
+			set user_password = #{userPassword}
+			    ,user_name = #{userName}
+			    ,user_birth_year = #{userBirthYear}
+			    ,user_sex = #{userSex}
+			where user_email = #{userEmail}
+		]]>
+	</update>
+	
+	
+	
+	
+	
+	<!-- 이지희 -->
+	   <select id="groupMemInfo" parameterType="int" resultType="com.lunchwb.vo.UserVo">
+	  		 select  user_no userNo,
+			         user_name userName,
+			         to_char(user_birth_year, 'YYYYMMDD') userBirthYear,
+			         user_sex userSex
+	         from users
+	         where user_no = #{userNo}
+	   </select>
+
+</mapper>
