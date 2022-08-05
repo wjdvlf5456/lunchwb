@@ -101,7 +101,7 @@
 								<a class="dropdown-item" href="${pageContext.request.contextPath}/user/userInfo">나의정보</a> <a
 									class="dropdown-item" href="${pageContext.request.contextPath}/group/groupList">나의그룹</a> <a
 									class="dropdown-item" href="${pageContext.request.contextPath}/stat/statCalender">방문내역</a> 
-								<a class="dropdown-item" href="${pageContext.request.contextPath}/customer/FAQ">고객센터</a>
+								<a class="dropdown-item" href="${pageContext.request.contextPath}/customer/faq">고객센터</a>
 							</div>
 					</li>
 				</c:when>

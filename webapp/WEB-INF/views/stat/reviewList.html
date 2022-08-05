@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>리뷰내역</title>
+    <meta name="og:type" content="article">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/alert.css">
+    <link rel="stylesheet" href="../../assets/css/Articale-List-With-Image-Zoom.css">
+    <link rel="stylesheet" href="../../assets/css/basket-aside.css">
+    <link rel="stylesheet" href="../../assets/css/Block-Responsive-Item-List.css">
+    <link rel="stylesheet" href="../../assets/css/Bold-BS4-Responsive-Pricing-Table-Snippet.css">
+    <link rel="stylesheet" href="../../assets/css/Bootstrap-4---Product-List.css">
+    <link rel="stylesheet" href="../../assets/css/Bootstrap-4-Calendar-No-Custom-Code.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/Contact-Form-v2-Modal--Full-with-Google-Map.css">
+    <link rel="stylesheet" href="../../assets/css/custom-buttons.css">
+    <link rel="stylesheet" href="../../assets/css/dh-row-text-image-right-responsive.css">
+    <link rel="stylesheet" href="../../assets/css/dh-row-titile-text-image-right-1.css">
+    <link rel="stylesheet" href="../../assets/css/FAQ.css">
+    <link rel="stylesheet" href="../../assets/css/genie-modal.css">
+    <link rel="stylesheet" href="../../assets/css/group.css">
+    <link rel="stylesheet" href="../../assets/css/HTML-layout-with-an-unordered-list.css">
+    <link rel="stylesheet" href="../../assets/css/ListeBien-listebien.css">
+    <link rel="stylesheet" href="../../assets/css/ListeBien.css">
+    <link rel="stylesheet" href="../../assets/css/Login-Form-Basic-icons.css">
+    <link rel="stylesheet" href="../../assets/css/random.css">
+    <link rel="stylesheet" href="../../assets/css/Review-rating-Star-Review-Button.css">
+    <link rel="stylesheet" href="../../assets/css/Reviews.css">
+    <link rel="stylesheet" href="../../assets/css/storeinfo.css">
+    <link rel="stylesheet" href="../../assets/css/storeList.css">
+    <link rel="stylesheet" href="../../assets/css/style-jw.css">
+    <link rel="stylesheet" href="../../assets/css/user.css">
+    <link rel="stylesheet" href="../../assets/css/visited.css">
+    <link rel="stylesheet" href="../../assets/css/vote.css">
+    <link rel="stylesheet" href="../../assets/css/yogiyo.css">
+</head>
+
+<body><div id="wrapper">
+	<nav class="navbar navbar-dark bg-primary align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0"
+		id="user-aside">
+		<div class="container-fluid d-flex flex-column p-0">
+			<a href="https://lunchwb.bss.design"> <img data-bss-hover-animate="pulse" id="bujang-logo" width="159" height="38"
+				src="../../assets/img/assets/img/bujang-logo.png">
+			</a>
+			<ul class="navbar-nav" id="asdie-ul">
+				<li class="nav-item"><a class="nav-link nav-title no-drag">나의정보</a></li>
+				<li class="nav-item"><a class="nav-link nav-menu" href="../../views/user/checkUserInfo.html">회원정보수정</a></li>
+				<li class="nav-item">
+					<hr class="nav-line">
+				</li>
+				<li class="nav-item"><a class="nav-link nav-title no-drag">나의그룹</a></li>
+				<li class="nav-item"><a class="nav-link nav-menu" href="../../views/group/groupList.html">그룹목록</a></li>
+				<li class="nav-item"><a class="nav-link nav-menu" href="../../views/group/groupList.html">그룹추가</a></li>
+				<li class="nav-item"><a class="nav-link nav-menu" href="../../views/group/blacklist.html">블랙리스트</a></li>
+				<li class="nav-item">
+					<hr class="nav-line">
+				</li>
+				<li class="nav-item"><a class="nav-link nav-title no-drag">방문내역</a></li>
+				<li class="nav-item"><a class="nav-link nav-menu" href="../../views/stat/statCalender.html">캘린더</a></li>
+				<li class="nav-item"><a class="nav-link nav-menu" href="../../views/stat/reviewList.html">리뷰내역</a></li>
+				<li class="nav-item"><a class="nav-link nav-menu" href="../../views/stat/statChart.html">방문통계</a></li>
+				<li class="nav-item">
+					<hr class="nav-line">
+				</li>
+
+				<li class="nav-item"><a class="nav-link nav-title no-drag">고객센터</a></li>
+				<li class="nav-item"><a class="nav-link nav-menu" href="../../views/customer/FAQ.html">FAQ</a></li>
+				<li class="nav-item"><a class="nav-link nav-menu" href="../../views/customer/writeInquiry.html">문의하기</a></li>
+				<li class="nav-item"><a class="nav-link nav-menu" href="../../views/customer/reviewReport.html">문의내역</a></li>
+				<li class="nav-item">
+					<hr class="nav-line">
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="d-flex flex-column" id="content-wrapper">
+		<div id="content">
+			<nav class="navbar navbar-light navbar-expand bg-white shadow d-xxl-flex justify-content-xxl-end mb-4 topbar static-top"
+				id="header">
+				<div class="container">
+					<div></div>
+					<ul class="navbar-nav d-xxl-flex align-items-xxl-center">
+						<li class="nav-item dropdown no-arrow" id="user-alert"><a class="dropdown-toggle nav-link nav-link"
+							aria-expanded="false" data-bs-toggle="dropdown"><span class="badge bg-danger badge-counter">3</span><i
+								class="fas fa-bell fa-fw"></i></a>
+							<div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+								<h6 class="dropdown-header">알림</h6>
+								<a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="me-3">
+										<div class="bg-primary icon-circle">
+											<i class="fas fa-file-alt text-white"></i>
+										</div>
+									</div>
+									<div>
+										<span class="small text-gray-500">22.07.21 13:51</span>
+										<p>새로운 그룹에 초대받았습니다. 수락하시겠습니까?</p>
+									</div>
+								</a><a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="me-3">
+										<div class="bg-success icon-circle">
+											<i class="fas fa-donate text-white"></i>
+										</div>
+									</div>
+									<div>
+										<span class="small text-gray-500">December 7, 2019</span>
+										<p>$290.29 has been deposited into your account!</p>
+									</div>
+								</a><a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="me-3">
+										<div class="bg-warning icon-circle">
+											<i class="fas fa-exclamation-triangle text-white"></i>
+										</div>
+									</div>
+									<div>
+										<span class="small text-gray-500">December 2, 2019</span>
+										<p>Spending Alert: We've noticed unusually high spending for your account.</p>
+									</div>
+								</a><a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+							</div></li>
+						<li class="nav-item d-inline-flex"><button class="btn btn-primary" id="logout-btn" type="button">로그아웃</button></li>
+						<li class="nav-item dropdown d-xxl-flex" id="menu-dropdown"><a class="nav-link" aria-expanded="false"
+							data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fas fa-bars"></i></a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="views/user/profile.html">나의정보</a><a class="dropdown-item" href="../../views/group/groupList.html">나의그룹</a><a
+									class="dropdown-item" href="../../views/stat/statCalender.html">방문내역</a><a class="dropdown-item" href="../../views/customer/FAQ.html">고객센터</a>
+							</div></li>
+					</ul>
+				</div>
+			</nav>
+
+
+			<div class="container">
+				<div class="d-sm-flex justify-content-between align-items-center mb-4">
+					<h3 class="text-dark mb-0">리뷰내역</h3>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 mx-auto">
+
+						<!-- List group-->
+						<ul class="list-group shadow">
+							<div class="container">
+								<!-- list group item-->
+								<li class="list-group-item">
+									<!-- Custom content-->
+									<div class="media align-items-lg-center flex-column flex-lg-row p-3">
+										<div class="media-body order-2 order-lg-1">
+
+
+											<h5 class="mt-0 font-weight-bold mb-2">흑룡강</h5>
+											<p class="font-italic text-muted mb-0 small">서울특별시 관악구 낙성대로 22-1</p>
+											<div class="d-flex align-items-center justify-content-between mt-1">
+												<h6 class="font-italic text-muted mb-0 small">여기갈래요 213회/40대 그룹 선호 가게</h6>
+												<ul class="list-inline small">
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+												</ul>
+											</div>
+										</div>
+										<div class="row row-cols-2">
+											<div class="col-2">
+
+												<img src="../../assets/img/assets/img/store/blackdragon.jpg" alt="Generic placeholder image" width="200" 
+													class="ml-lg-5 order-1 order-lg-2" onclick="location.href='../../views/includes/modal/storeInfo.html'">
+											</div>
+											<div id="loading" class="col-9 bg-light border rounded border-light jumbotron py-3 px-4">
+												<div>우리 상사분들이 정말 좋아하셔요</div>
+											</div>
+                                            <div class="col-1">
+                                                <button class="btn-primary m-1">수정</button>
+                                                <button class="btn-danger m-1">삭제</button>
+                                            </div>
+										</div>
+									</div> <!-- End -->
+								</li>
+								<!-- End -->
+
+								<!-- list group item-->
+								<li class="list-group-item">
+									<!-- Custom content-->
+									<div class="media align-items-lg-center flex-column flex-lg-row p-3">
+										<div class="media-body order-2 order-lg-1">
+											<h5 class="mt-0 font-weight-bold mb-2">킷사서울</h5>
+											<p class="font-italic text-muted mb-0 small">서울특별시 관악구 남부순환로226길 31 2층 킷사서울</p>
+											<div class="d-flex align-items-center justify-content-between mt-1">
+												<h6 class="font-italic text-muted mb-0 small">여기갈래요 1745회/20대 그룹 선호 가게</h6>
+												<ul class="list-inline small">
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+												</ul>
+											</div>
+										</div>
+										<div class="row row-cols-2">
+											<div class="col-2">
+												<img src="../../assets/img/assets/img/store/kitsaseoul.jpg" alt="Generic placeholder image" width="200" 
+													class="ml-lg-5 order-1 order-lg-2">
+											</div>
+											<div id="loading" class="col-9 bg-light border rounded border-light jumbotron py-3 px-4">
+												<div>정말 맛있어요 ^^ 담에 또 올 거에요 ~</div>
+											</div>
+                                            <div class="col-1">
+                                                <button class="btn-primary m-1">수정</button>
+                                                <button class="btn-danger m-1">삭제</button>
+                                            </div>
+										</div>
+									</div> <!-- End -->
+								</li>
+								<!-- End -->
+
+								<!-- list group item -->
+								<li class="list-group-item">
+									<!-- Custom content-->
+									<div class="media align-items-lg-center flex-column flex-lg-row p-3">
+										<div class="media-body order-2 order-lg-1">
+											<h5 class="mt-0 font-weight-bold mb-2">피자보이시나 서울대점</h5>
+											<p class="font-italic text-muted mb-0 small">서울 관악구 남부순환로234길 31 1층 피자보이시나</p>
+											<div class="d-flex align-items-center justify-content-between mt-1">
+												<h6 class="font-italic text-muted mb-0 small">여기갈래요 984회/20대 그룹 선호 가게</h6>
+												<ul class="list-inline small">
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+												</ul>
+											</div>
+										</div>
+										<div class="row row-cols-2">
+											<div class="col-2">
+												<img src="../../assets/img/assets/img/store/pizza.jpg" alt="Generic placeholder image" width="200"
+													class="col-9  ml-lg-5 order-1 order-lg-2">
+											</div>
+											<div id="loading" class="col-9 bg-light border rounded border-light jumbotron py-3 px-4">
+												<div>분위기도 좋고 맛도 좋았어요</div>
+											</div>
+                                            <div class="col-1">
+                                                <button class="btn-primary m-1">수정</button>
+                                                <button class="btn-danger m-1">삭제</button>
+                                            </div>
+											<!-- End -->
+										</div>
+                                    </div>
+								</li>
+								<!-- End -->
+
+								<!-- list group item -->
+								<li class="list-group-item">
+									<!-- Custom content-->
+									<div class="media align-items-lg-center flex-column flex-lg-row p-3">
+										<div class="media-body order-2 order-lg-1">
+											<h5 class="mt-0 font-weight-bold mb-2">코코미</h5>
+											<p class="font-italic text-muted mb-0 small">서울 관악구 관악로 146 1층</p>
+											<div class="d-flex align-items-center justify-content-between mt-1">
+												<h6 class="font-italic text-muted mb-0 small">여기갈래요 518회/20대 그룹 선호 가게</h6>
+												<ul class="list-inline small">
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+													<li class="list-inline-item m-0"><i class="fa fa-star text-warning"></i></li>
+												</ul>
+											</div>
+										</div>
+										<div class="row row-cols-2">
+											<div class="col-2">
+												<img src="../../assets/img/assets/img/store/kokomi.jpg" alt="Generic placeholder image" width="200"
+													class="ml-lg-5 order-1 order-lg-2">
+											</div>
+											<div id="loading" class="col-9 bg-light border rounded border-light jumbotron py-3 px-4">
+												<div>진짜 장인이 해줘요</div>
+											</div>
+                                            <div class="col-1">
+                                                <button class="btn-primary m-1">수정</button>
+                                                <button class="btn-danger m-1">삭제</button>
+                                            </div>
+                                        </div>
+									</div>
+										<!-- End -->
+								</li>
+								<!-- End -->
+                            </div>
+						</ul>
+						<!-- End -->
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<footer class="bg-white sticky-footer" id="footer">
+			<div class="container my-auto">
+				<div class="text-center my-auto copyright">
+					<span>Copyright © FEELIS 2022<br>https://github.com/FEELIS&nbsp;<br></span>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/chart.min.js"></script>
+<script src="assets/js/bs-init.js"></script>
+<script src="assets/js/theme.js"></script>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bs-init.js"></script>
+    <script src="../../assets/js/chart.min.js"></script>
+    <script src="../../assets/js/Contact-Form-v2-Modal--Full-with-Google-Map.js"></script>
+    <script src="../../assets/js/ListeBien.js"></script>
+    <script src="../../assets/js/liveReload.js"></script>
+    <script src="../../assets/js/Review-rating-Star-Review-Button.js"></script>
+    <script src="../../assets/js/theme.js"></script>
+    <script src="../../assets/js/WOWSlider-about-us.js"></script>
+</body>
+
+</html>
