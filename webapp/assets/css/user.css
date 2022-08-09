@@ -1,3 +1,11 @@
+input {
+  width: 170px;
+  height: 35px;
+  margin: 0px 5px 10px 0px;
+  padding: 0px 5px;
+  font-size: 14px;
+}
+
 .btn-kakao {
   color: #fff;
   background-color: #f6c23e;
@@ -29,17 +37,18 @@
 #check-email {
   display: inline-block;
   width: 100px;
-  height: auto;
+  height: 35px;
   border-radius: 5rem;
 }
 
 #inputJoinEmail {
   display: inline-block;
-  width: 350px;
+  width: 300px;
   margin-right: 10px;
 }
 
 .join-text {
+  min-width:420px;
   font-size: 14px;
   display: block;
   margin-bottom: 5px;
@@ -69,6 +78,11 @@
   padding: 0;
 }
 
+#inputJoinNickname{
+  width : 300px;
+  height : 35px;
+}
+
 #inputJoinDate {
   font-weight: 400;
   line-height: 3;
@@ -79,12 +93,15 @@
 }
 
 #inputBirthDate{
-  width : 150px;
-  height : 40px;
+  width : 180px;
+  height : 35px;
+  font-size: .8rem;
   text-align :center;
+  color: #858796;
   padding : 5px 10px;
   border: 1px solid #d1d3e2;
   border-radius: 10rem;
+  
 }
 
 #inputBirthDate:focus{
@@ -127,3 +144,8 @@
   border-radius: 10rem !important;
 }
 
+.input-box{
+	min-width:380px;
+	width:380px;
+	min-height: 35px;
+}
