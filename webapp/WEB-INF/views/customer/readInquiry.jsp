@@ -10,9 +10,7 @@
 
 <!-- css -->
 <link href="${pageContext.request.contextPath}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="${pageContext.request.contextPath}/assets/css/notification.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/assets/css/yogiyo.css" rel="stylesheet" type="text/css">
-
 
 <!-- fonts -->
 <link href="${pageContext.request.contextPath}/assets/fonts/fontawesome-all.min.css" rel="stylesheet" type="text/css">
@@ -26,7 +24,7 @@
 <body>
 	<div id="wrapper">
 		<!-- aside -->
-		<c:import url="/WEB-INF/views/includes/aside/userAside.jsp"></c:import>
+		<c:import url="/WEB-INF/views/includes/aside/aside.jsp"></c:import>
 		<!-- /aside -->
 
 		<div class="d-flex flex-column" id="content-wrapper">

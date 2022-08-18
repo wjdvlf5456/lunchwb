@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -27,6 +28,8 @@
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Component" />
 	</context:component-scan>
+	
+	<util:properties id="apiProperties" location="classpath:api.properties"/>
 
 	<!-- oracle datasource -->
 	<bean id="oracleDatasource"
@@ -36,14 +39,15 @@
 		<property name="password" value="^^65Rhcemdtla" />
 		<property name="connectionCachingEnabled" value="true" />
 		<qualifier value="main-db" />
-	</bean><!-- MyBatis SqlSessionFactoryBean 설정 -->
+	</bean>
+
+	<!-- MyBatis SqlSessionFactoryBean 설정 -->
 	<bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="oracleDatasource" />
 		<property name="configLocation"
 			value="classpath:mybatis/configuration.xml" />
 	</bean>
-
 
 	<!-- MyBatis SqlSessionTemplate 설정 -->
 	<bean id="sqlSession"

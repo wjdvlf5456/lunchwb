@@ -1,23 +1,22 @@
 #vote-map-wrapper {
-  position: relative;
+  position: static;
 }
 
 #vote-result-content-wrapper {
-  position: relative;
+  position: static;
 }
 
 #container {
   max-width: 1920px;
-  height: auto;
   margin: 0;
   padding: 0;
   min-width: 400px;
   width: 100%;
+  padding-bottom: 50px;
 }
 
 #waiting-container {
   max-width: 1920px;
-  height: 892px;
   margin: 0;
   padding: 0;
   min-width: 1094px;
@@ -32,7 +31,6 @@
   margin-top: 10px;
   width: 100%;
   min-height: auto;
-  height: 865.5px;
 }
 
 .vote-container-title {
@@ -755,3 +753,4 @@
 #waiting-vote-link-area {
   z-index: 100;
 }
+

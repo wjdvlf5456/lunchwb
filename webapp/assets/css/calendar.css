@@ -1,19 +1,3 @@
-/* 
-220803 11:53 최정필
-calendar.css 로 파일명 변경
-
-.card 에 text-align: center 추가
- 
-.show-menu {
-  flex: 0 0 auto;
-  margin-left: 16.66666667%;
-  width: 66.66666667%;
-  min-width: inherit;
-}  추가
-
-
- */
-
 @media (min-width: 992px) {
   .month {
     font-size: 3.5rem;
@@ -21,25 +5,46 @@ calendar.css 로 파일명 변경
 }
 
 
+
+/* =================================== 달력헤더 =================================== */
+#main-content {
+  margin-left: 5px;
+  margin-right: 20px;
+  color: var(--bs-dark);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 100%;
+  min-height: auto;
+}
+
+#main-content .week {
+	text-align: center;
+}
+	
+
+#main-content .disabled{
+  color: #ddd;
+}
+
+
+.prev-button, .next-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* =================================== 달력 바디 =================================== */
 .calendar {
   border-radius: 10px;
 }
 
-.calendar-wrapper {
-  width: 100%;
-  margin: auto;
-  border: 1px solid #eee;
-  padding: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.month {
-  font-size: 2rem;
-}
-
 .calendar ol li {
   float: left;
+  width: 14.28571%;
   list-style: none;
 }
 
@@ -54,15 +59,13 @@ calendar.css 로 파일명 변경
 
 .calendar .days li {
   border-bottom: 1px solid #eee;
-  min-height: 8rem;
+  min-height: 12rem;
 }
+
 
 .calendar .days li .date {
   margin: 0.5rem 0;
-}
-
-.date{
-	padding-right: 20px;
+  padding-right: 1rem;
 }
 
 .calendar .days li .event {
@@ -96,39 +99,32 @@ calendar.css 로 파일명 변경
   border-bottom: none;
 }
 
+/* ===== 이전달 or 다음달 ===== */
 .calendar .days li.outside .date {
   color: #ddd;
 }
 
-.card, .h1 {
-	text-align: center;
+.week.start-on-sunday .day:first-child{
+  color: red;
 }
 
-.prev-button, .next-button {
-  background: transparent;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+
+.month {
+  font-size: 2rem;
+}
+
+.week {
+  margin: 0 !important;
+  overflow: hidden;
 }
 
 .show-menu {
   flex: 0 0 auto;
-  margin-left: 16.66666667%;
-  width: 100%;
+  width: 95%;
   min-width: inherit;
 }
 
-.week {
-  overflow: hidden;
-}
 
-.week.start-on-sunday .day:last-child {
-  color: blue;
-}
-
-.week.start-on-sunday .day:nth-child(1) {
-  color: red;
-}
 
 
 

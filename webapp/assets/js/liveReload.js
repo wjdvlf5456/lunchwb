@@ -1,14 +1,14 @@
 (function(){
 
 	var script = document.getElementById('bs-live-reload');
-	var sseport = script.getAttribute('data-sseport');
+	var sessport = script.getAttribute('data-sessport');
 	var lastchange = script.getAttribute('data-lastchange');
 
 	var pageIsVisible = true;
 	var needsReload = false;
 
 	if ('EventSource' in window) {
-		var es = new EventSource("http://" + location.hostname + ":" + sseport + "/");
+		var es = new EventSource("http://" + location.hostname + ":" + sessport + "/");
 		es.onmessage = function(msg){
 			
 			var obj = JSON.parse(msg.data);
@@ -92,4 +92,4 @@
 		}
 	});
 	
-})();
+});
